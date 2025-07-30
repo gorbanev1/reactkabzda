@@ -3,6 +3,7 @@ import './App.css'
 import {Accordion} from "./components/Accordion";
 import {UncontrolledRating} from "./components/UncontrolledRating";
 import {OnOff} from "./components/OnOff";
+import {v1} from 'uuid'
 
 
 function App() {
@@ -10,6 +11,9 @@ function App() {
     const [open, setOpen]=useState<boolean>(false)
     const [openAccordion, setAaccordionOpen] =useState<boolean>(false)
     const [on, setOn] =useState<boolean>(false)
+
+    const items = [{value: 'asas', id:v1()}, {value: 'asas', id:v1()}, {value: 'asas', id:v1()}]
+
     const filter = (arr:any, callback:any)=>{
         const result=[]
         for(let i=0; i<arr.length; i++){
@@ -21,7 +25,7 @@ function App() {
     let [value, setValue]=useState<1|2|3|4|5>(1)
     return (
         <>
-            <Accordion title={"sfsdfsd"} open={open} setOpen={setOpen}/>
+            <Accordion title={"sfsdfsd"} open={open} setOpen={setOpen} items={items}/>
             <UncontrolledRating/>
 
 
