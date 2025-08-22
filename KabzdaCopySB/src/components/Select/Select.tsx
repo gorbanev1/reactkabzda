@@ -1,4 +1,5 @@
 import type {HandlerFunction} from "storybook/actions";
+import s from './Select.module.css'
 
 type ItemType = {
     title: string
@@ -6,15 +7,15 @@ type ItemType = {
 }
 
 type SelectPropsType ={
-    value: any
+    value?: any
     onChange: HandlerFunction
     items: ItemType[]
 }
 
 export function Select(props: SelectPropsType){
     return (
-        <div>
-            <div>{props.value}</div>
+        <div className={s.select}>
+            <h2>{props.value}</h2>
             {props.items.map(i=><div>{i.title}</div>)}
         </div>
     )
