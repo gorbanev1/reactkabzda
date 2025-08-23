@@ -1,7 +1,17 @@
-.select {
+.select span.main{
     border: 1px solid black;
+    display: inline-block;
+    min-height: 30px;
+    min-width: 40px;
 }
 
 .items {
+    padding: 5px;
+
+    position: absolute;
     border: 1px solid black;
+}
+
+.select.active .item {
+    display: block;
 }

@@ -4,6 +4,7 @@ import {Accordion} from "./components/Accordion";
 import {UncontrolledRating} from "./components/UncontrolledRating";
 import {OnOff} from "./components/OnOff";
 import {v1} from 'uuid'
+import {Select} from "./components/Select/Select.tsx";
 
 
 function App() {
@@ -23,8 +24,14 @@ function App() {
     }
 
     let [value, setValue]=useState<1|2|3|4|5>(1)
+    const items1= [
+        {title: "sdfsd", value: "1212"},
+        {title: "sd1q11fsd", value: "12sdfsd12"},
+        {title: "sdfssdfsdd", value: "12sdfs12"},
+    ]
     return (
         <>
+            <Select onChange={()=>{}} items={items1}/>
             <Accordion title={"sfsdfsd"} open={open} setOpen={setOpen} items={items}/>
             <UncontrolledRating/>
 
