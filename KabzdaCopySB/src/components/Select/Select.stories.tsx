@@ -13,11 +13,10 @@ const items = [
 ]
 
 export const SelectWrapper = (props) => {
-    const [value, setValue] = React.useState(null);
+    const [value, setValue] = React.useState(items[0].value);
     return (<Select onChange={setValue}
                     items={items}
                     value={value}/>
-
     )
 }
 
