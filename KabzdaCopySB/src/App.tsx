@@ -6,6 +6,8 @@ import {OnOff} from "./components/OnOff";
 import {v1} from 'uuid'
 import {Select} from "./components/Select/Select.tsx";
 import {SelectWrapper} from "./components/Select/Select.stories.tsx";
+import {ControlledRating} from "./components/ControlledRating.tsx";
+import {ControlledAccordion} from "./components/ControlledAccordion.tsx";
 
 
 function App() {
@@ -32,13 +34,13 @@ function App() {
     ]
     return (
         <>
-            <SelectWrapper />
-{/*            <Accordion title={"sfsdfsd"} open={open} setOpen={setOpen} items={items}/>
-            <UncontrolledRating/>
+            {/*<SelectWrapper />*/}
+            <ControlledAccordion title={"sfsdfsd"} open={open} setOpen={setOpen} items={items}/>
+{/*            <UncontrolledRating/>
 
 
-            <OnOff setOn={setOn} on={on}/>*/}
-            {/*<ControlledRating value={value} setValue={setValue}/>*/}
+            <OnOff setOn={setOn} on={on}/>
+            <ControlledRating value={value} setValue={setValue}/>*/}
         </>
     )
 }
