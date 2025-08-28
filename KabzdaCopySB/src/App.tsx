@@ -7,7 +7,7 @@ import {v1} from 'uuid'
 import {Select} from "./components/Select/Select.tsx";
 import {SelectWrapper} from "./components/Select/Select.stories.tsx";
 import {ControlledRating} from "./components/ControlledRating.tsx";
-import {ControlledAccordion} from "./components/ControlledAccordion.tsx";
+import {ControlledAccordion} from "./components/ControlledAccordion/ControlledAccordion.tsx";
 
 
 function App() {

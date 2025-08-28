@@ -1,4 +1,5 @@
 import React, {type Dispatch, type SetStateAction, useReducer, useState} from 'react';
+import {reducer} from "./Reducer.ts";
 
 type AccordionTitlePropsType ={
     title:string
@@ -20,26 +21,11 @@ type AccordionBodyPropsType ={
     open: boolean
 
 }
-type ActionType={
-    type: string
-}
-
-
-
-
-
 
 export const ControlledAccordion = ({title, setOpen, open}:AccordionPropsType) => {
-    const reducer = (state: boolean, action: ActionType) => {
 
 
-        if(action.type==="TOGGLE-COLAPSED"){
-            debugger;
-            return !state;
-        }
-
-    }
-    let [collapsed, dispatch]=useReducer(reducer, false)
+    let [state, dispatch]=useReducer(reducer, {collapsed: true})
 
 /*    const AccordionTitle = ({title, setOpen}:AccordionTitlePropsType)=>{
         return (
@@ -60,7 +46,7 @@ export const ControlledAccordion = ({title, setOpen, open}:AccordionPropsType) =
 
         return ( <>
                 <ul>
-                    {collapsed && <>
+                    {state.collapsed && <>
                         <li>1</li>
                         <li>2</li>
                         <li>3</li>
@@ -76,7 +62,7 @@ export const ControlledAccordion = ({title, setOpen, open}:AccordionPropsType) =
     return (
         <div>
             <AccordionTitle title={title} onClick={()=> {
-                dispatch({type: "TOGGLE-COLAPSED"})
+                dispatch({type: "TOGGLE-COLLAPSED"})
             }}/>
             <AccordionBody open={open} setOpen={setOpen}/>
 
